@@ -19,9 +19,43 @@ header{
     text-align: left;
 }
 
-.searchBar{
-    margin: auto;
+/* barra de busqueda */
+.search {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+  
+.searchTerm {
+    width: 80%;
+    border: none;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+  
+.searchTerm:focus{
+    color: #004fa3;
+}
+  
+.searchButton {
+    width: 40px;
+    height: 30px;
+    border: none;
+    background: white;
+    text-align: center;
+    color: #666;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+/* fin de barra de busqueda */
 
 #fondo-burger-menu{
     color:aliceblue;
@@ -88,6 +122,18 @@ div{
     border: none;
     min-width: 40%;
     height: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.deleteBtn{
+    color:#ffffff;
+    background-color: #c31212;
+    border-radius: 0.2em;
+    border: none;
+    min-width: 40%;
+    height: 40px;
+    cursor: pointer;
 }
 
 .registerBtn:hover{
@@ -95,8 +141,15 @@ div{
     transition: 0.8s;
 }
 
+.deleteBtn:hover{
+    background-color: #8a0000;
+    transition: 0.8s;
+}
 
-
+.dsBtn{
+    display: flex;
+    flex-direction: column;
+}
 
 .fondo-compartido{
     background-color: white;
@@ -124,9 +177,14 @@ footer{
 }
 
 #iconos{
-    color: #1259c3;
+    color:#666;
     font-size: 32px;
     margin-bottom: 10px;
+}
+
+#iconos:hover{
+    color:#004fa3;
+    transition: 1s;
 }
 
 @media(max-width: 361px){
@@ -135,6 +193,11 @@ footer{
     }
     .descripciones{
         display: none;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
